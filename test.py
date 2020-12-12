@@ -1,8 +1,8 @@
-from SimpleTable import *
+from simplecsv import SimpleCsv
 
 def main():
-	main_csv = SimpleTable('example_data/test.csv')
-	other_csv = SimpleTable('example_data/other.csv')
+	main_csv = SimpleCsv('example_data/test.csv')
+	other_csv = SimpleCsv('example_data/other.csv')
 
 	merged_csv = merge(main_csv, other_csv)
 	print(merged_csv)
@@ -10,7 +10,7 @@ def main():
 def merge(a_csv, b_csv):
 	a_dict = a_csv.to_dict('Name')
 	b_dict = b_csv.to_dict('Name')
-	merged = SimpleTable()
+	merged = SimpleCsv()
 	merged.set_col_names(merge_column_names(a_csv, b_csv))
 	for key in a_dict:
 		datum_a = a_dict[key]
