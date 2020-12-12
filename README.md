@@ -6,7 +6,7 @@ This package is built to make it truly simple to open an work with a standard CS
 from simplecsv import SimpleCsv
 
 def main():
-	data = SimpleCsv('test.csv')
-	for datum in data:
-		print(datum)
+    data = SimpleCsv('test.csv')
+    for datum in data:
+        print(datum)
 ```
